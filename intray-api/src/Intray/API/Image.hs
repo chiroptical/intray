@@ -2,7 +2,6 @@ module Intray.API.Image where
 
 import Codec.Picture
 import Codec.Picture.Extra
-import Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy as LB
 import Import
 

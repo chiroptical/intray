@@ -1,4 +1,5 @@
 {-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DerivingStrategies #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
@@ -6,6 +7,7 @@
 {-# LANGUAGE StandaloneDeriving #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE UndecidableInstances #-}
 
 module Intray.Web.Server.DB where
 
@@ -13,7 +15,6 @@ import Database.Persist.Sql
 import Database.Persist.TH
 import Intray.Client
 import Intray.Web.Server.Persistence ()
-import Servant.Auth.Client (Token(..))
 
 share
   [mkPersist sqlSettings, mkMigrate "migrateLoginCache"]

@@ -11,7 +11,6 @@ module Intray.Client
   ) where
 
 import Data.Mergeless
-import Data.Set (Set)
 import qualified Data.UUID.Typed
 import Import
 import Intray.API

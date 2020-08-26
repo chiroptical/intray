@@ -1,32 +1,31 @@
 {-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DerivingStrategies #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
+{-# LANGUAGE StandaloneDeriving #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module Intray.Data.DB where
 
-import Intray.Data.Import
-
 import Data.Set (Set)
 import Data.Time
-
 import Database.Persist.Sql
 import Database.Persist.TH
-
-import qualified Web.Stripe.Types as Stripe
-
 import Intray.Data.AccessKeyUUID
 import Intray.Data.AccountUUID
 import Intray.Data.HashedPassword
+import Intray.Data.Import
 import Intray.Data.ItemType
 import Intray.Data.ItemUUID
 import Intray.Data.Permission
 import Intray.Data.Stripe ()
 import Intray.Data.Username
+import qualified Web.Stripe.Types as Stripe
 
 share
   [mkPersist sqlSettings, mkMigrate "migrateAll"]

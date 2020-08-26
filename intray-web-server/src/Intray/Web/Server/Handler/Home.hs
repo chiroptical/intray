@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
 
 module Intray.Web.Server.Handler.Home
@@ -5,14 +6,15 @@ module Intray.Web.Server.Handler.Home
   ) where
 
 import Import
-
-import Yesod
-
 import Intray.Client
 import Intray.Web.Server.Foundation
 import Intray.Web.Server.Handler.Pricing
+import Yesod
 
 getHomeR :: Handler Html
 getHomeR = do
   mPricing <- runClientOrErr clientGetPricing
-  withNavBar $(widgetFile "home")
+  withNavBar $ do
+    setTitle "Intray"
+    setDescription "A GTD In-box system"
+    $(widgetFile "home")

@@ -17,7 +17,6 @@ module Intray.Web.Server.TestUtils
 
 import Control.Monad.Logger
 import qualified Data.Text as T
-import Data.Text (Text)
 import Database.Persist.Sqlite hiding (get)
 import Intray.Data
 import Intray.Data.Gen ()

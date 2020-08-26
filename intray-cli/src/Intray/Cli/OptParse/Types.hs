@@ -6,7 +6,6 @@
 module Intray.Cli.OptParse.Types where
 
 import Control.Applicative
-import Data.Text (Text)
 import Data.Yaml as Yaml hiding (object)
 import Import
 import Intray.Data

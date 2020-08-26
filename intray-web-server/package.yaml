@@ -28,7 +28,7 @@ library:
   - intray-server
   - monad-logger
   - mtl
-  - optparse-applicative >=0.13 && <0.15
+  - optparse-applicative >=0.13
   - path
   - path-io
   - persistent

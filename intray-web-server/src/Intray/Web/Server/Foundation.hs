@@ -31,7 +31,6 @@ import Intray.Web.Server.Static
 import Intray.Web.Server.Widget
 import qualified Network.HTTP.Client as Http
 import qualified Network.HTTP.Types as Http
-import Servant.Auth.Client (Token(..))
 import Text.Hamlet
 import Web.Cookie
 import Yesod hiding (Header)
